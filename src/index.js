@@ -10,7 +10,7 @@ const app = express();
 
 app.use('/rest', proxy('https://www.zippia.com/', {
   proxyReqOptDecorator(opts) {
-    opts.headers['x-forwarded-host'] = '0.0.0:3000';
+    opts.headers['x-forwarded-host'] = '0.0.0:5000';
     return opts;
   }
 }));
@@ -42,6 +42,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Listening to port 3000')
+app.listen(5000, () => {
+  console.log('Listening to port 5000')
 });
