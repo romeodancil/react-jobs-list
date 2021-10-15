@@ -18,10 +18,10 @@ class HomePage extends Component {
           </div>
         </div>
         <div className="row">
-          <div div className="col m4 l4 s12">
+          <div div className="col s12 m12 l4">
             <SearchJobs/>
           </div>
-          <div className="col m8 l8 s12">
+          <div className="col s12 m12 l8">
             <JobsLists jobs={this.props.jobs} />
           </div>
         </div>
