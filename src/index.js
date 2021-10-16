@@ -7,13 +7,9 @@ import renderer from './helpers/renderer';
 import createStore from './helpers/createStore';
 
 const app = express();
+const PORT  = process.env.PORT || 5000
 
-app.use('/rest', proxy('https://www.zippia.com/', {
-  proxyReqOptDecorator(opts) {
-    opts.headers['x-forwarded-host'] = '0.0.0:5000';
-    return opts;
-  }
-}));
+app.use('/rest', proxy('https://www.zippia.com/'));
 
 app.use(express.static('public'));
 app.get('*', (req, res) => {
@@ -42,6 +38,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log('Listening to port 5000')
+app.listen(PORT, () => {
+  console.log(`Listening to port ${PORT}`)
 });

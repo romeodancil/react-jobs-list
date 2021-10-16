@@ -36,9 +36,9 @@ class SearchJobs extends Component {
 
     render() {
         return (
-            <div class="row">
+            <div className="row">
                 <div className="col s12">
-                    <div class="row">
+                    <div className="row">
                         <div className="input-field col s12">
                             <i className="material-icons prefix">search</i>
                             <input onChange={this.handleSearch} placeholder="Enter Company Name" id="company_name" type="text" className="validate" />
@@ -47,13 +47,13 @@ class SearchJobs extends Component {
                     </div>
                 </div>
                 <div className="col s12">
-                    <div class="row">
+                    <div className="row">
                         <div className="col s12">
                             <label>
                                 <i className="material-icons left">today</i>
                                 Filter Post From Last 7 Days
                             </label>
-                            <div class="switch">
+                            <div className="switch">
                                 <label>
                                 Off
                                 <input checked={this.state.toggle} onChange={this.handleToggle} type="checkbox"/>

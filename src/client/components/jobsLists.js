@@ -5,7 +5,7 @@ export default class JobsList extends Component {
     renderJobsLists(jobs) {
         return jobs.map((job) => {
             return (
-                <li key={job.id} className="collection-item avatar">
+                <li className="collection-item avatar" key={job.id}>
                     <i className="material-icons circle green">insert_chart</i>
                     <span style={{color: '#ee6e73'}} className="title">{job.companyName}</span>
                     <hr/>
