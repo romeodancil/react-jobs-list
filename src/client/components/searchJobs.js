@@ -38,30 +38,24 @@ class SearchJobs extends Component {
         return (
             <div className="row">
                 <div className="col s12">
-                    <div className="row">
-                        <div className="input-field col s12">
-                            <i className="material-icons prefix">search</i>
-                            <input onChange={this.handleSearch} placeholder="Enter Company Name" id="company_name" type="text" className="validate" />
-                            <label className="active" htmlFor="company_name">Search By Company Name</label>
-                        </div>
+                    <div className="input-field">
+                        <i className="material-icons prefix">search</i>
+                        <input onChange={this.handleSearch} placeholder="Enter Company Name" id="company_name" type="text" className="validate" />
+                        <label className="active" htmlFor="company_name">Search By Company Name</label>
                     </div>
                 </div>
                 <div className="col s12">
-                    <div className="row">
-                        <div className="col s12">
-                            <label>
-                                <i className="material-icons left">today</i>
-                                Filter Post From Last 7 Days
-                            </label>
-                            <div className="switch">
-                                <label>
-                                Off
-                                <input checked={this.state.toggle} onChange={this.handleToggle} type="checkbox"/>
-                                <span className="lever"></span>
-                                On
-                                </label>
-                            </div>
-                        </div>
+                    <label>
+                        <i className="material-icons left">today</i>
+                        Filter Post From Last 7 Days
+                    </label>
+                    <div className="switch">
+                        <label>
+                        Off
+                        <input checked={this.state.toggle} onChange={this.handleToggle} type="checkbox"/>
+                        <span className="lever"></span>
+                        On
+                        </label>
                     </div>
                 </div>
             </div>
